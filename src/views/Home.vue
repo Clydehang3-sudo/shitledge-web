@@ -1,9 +1,9 @@
 <template>
   <section class="journal-cover">
     <div class="poop-orbit" aria-hidden="true">
-      <span class="poop-float poop-float-a">💩</span>
-      <span class="poop-float poop-float-b">💩</span>
-      <span class="poop-float poop-float-c">💩</span>
+      <img class="poop-float poop-float-a" :src="poopOutline" alt="" />
+      <img class="poop-float poop-float-b" :src="poopOutline" alt="" />
+      <img class="poop-float poop-float-c" :src="poopOutline" alt="" />
     </div>
 
     <p class="eyebrow">Independent Institute of Absurd Studies</p>
@@ -16,6 +16,17 @@
       <p class="cover-note">A peer-reviewed home for statistically significant nonsense.</p>
       <router-link class="cover-cta" to="/articles">Browse Issue</router-link>
     </div>
+
+    <section class="plate-gallery" aria-label="Illustrated archive plates">
+      <figure class="plate-card detail-paper">
+        <img :src="plateOne" alt="Coprolite Geometry archival plate" />
+        <figcaption>Plate I · Coprolite Geometry</figcaption>
+      </figure>
+      <figure class="plate-card detail-paper">
+        <img :src="plateTwo" alt="Field notes on urban coprology" />
+        <figcaption>Plate II · Field Notes in Urban Coprology</figcaption>
+      </figure>
+    </section>
 
     <div class="home-grid">
       <article class="panel">
@@ -33,3 +44,9 @@
     </div>
   </section>
 </template>
+
+<script setup>
+import poopOutline from '../assets/poop-outline.svg'
+import plateOne from '../assets/coprolite-plate.svg'
+import plateTwo from '../assets/field-notes.svg'
+</script>

@@ -1,0 +1,15 @@
+<svg width="720" height="420" viewBox="0 0 720 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="16" y="16" width="688" height="388" rx="6" stroke="#BEB6A8" stroke-width="2"/>
+  <rect x="44" y="44" width="632" height="312" fill="#FBF8F2"/>
+  <path d="M145 269c0-45 36-80 80-80h112c44 0 80 35 80 80" stroke="#736C5F" stroke-width="3"/>
+  <path d="M173 214c0-24 19-44 43-44h130c24 0 43 20 43 44" stroke="#857D6E" stroke-width="3"/>
+  <path d="M208 170c0-18 14-32 32-32h80c18 0 32 14 32 32" stroke="#938B7B" stroke-width="3"/>
+  <path d="M240 137c0-11 9-20 20-20h40c11 0 20 9 20 20" stroke="#A29A8A" stroke-width="3"/>
+  <circle cx="274" cy="242" r="7" fill="#7D7566"/>
+  <circle cx="321" cy="252" r="6" fill="#7D7566"/>
+  <circle cx="364" cy="242" r="7" fill="#7D7566"/>
+  <path d="M95 90h530" stroke="#D8D1C4"/>
+  <path d="M95 327h530" stroke="#D8D1C4"/>
+  <text x="100" y="80" fill="#6E675B" font-size="19" font-family="Iowan Old Style, serif">Plate I — Coprolite Geometry (Reconstructed)</text>
+  <text x="100" y="350" fill="#6E675B" font-size="16" font-family="Courier Prime, monospace">Fig. A · Institute Archive · Annotated specimen</text>
+</svg>

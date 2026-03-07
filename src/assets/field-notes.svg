@@ -1,0 +1,17 @@
+<svg width="720" height="420" viewBox="0 0 720 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="16" y="16" width="688" height="388" rx="6" stroke="#BEB6A8" stroke-width="2"/>
+  <rect x="44" y="44" width="632" height="312" fill="#FCFAF5"/>
+  <path d="M108 96h504" stroke="#D8D1C4"/>
+  <path d="M108 129h504" stroke="#D8D1C4"/>
+  <path d="M108 162h504" stroke="#D8D1C4"/>
+  <path d="M108 195h504" stroke="#D8D1C4"/>
+  <path d="M108 228h504" stroke="#D8D1C4"/>
+  <path d="M108 261h504" stroke="#D8D1C4"/>
+  <path d="M108 294h504" stroke="#D8D1C4"/>
+  <path d="M140 124c0-12 10-22 22-22h77c12 0 22 10 22 22" stroke="#8D8576" stroke-width="2.6"/>
+  <path d="M158 102c0-8 6-14 14-14h50c8 0 14 6 14 14" stroke="#9D9485" stroke-width="2.6"/>
+  <path d="M134 208c0-17 14-31 31-31h108c17 0 31 14 31 31" stroke="#7C7465" stroke-width="2.6"/>
+  <path d="M155 177c0-10 8-18 18-18h72c10 0 18 8 18 18" stroke="#8C8475" stroke-width="2.6"/>
+  <text x="106" y="80" fill="#6E675B" font-size="19" font-family="Iowan Old Style, serif">Plate II — Field Notes on Urban Coprology</text>
+  <text x="106" y="345" fill="#6E675B" font-size="16" font-family="Courier Prime, monospace">Observed in the wild: 09:17 Monday motivation leakage</text>
+</svg>

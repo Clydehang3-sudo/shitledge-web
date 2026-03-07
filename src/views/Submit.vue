@@ -7,8 +7,8 @@
     </header>
 
     <div class="submit-decor" aria-hidden="true">
-      <span class="poop-float poop-float-a">💩</span>
-      <span class="poop-float poop-float-b">💩</span>
+      <img class="poop-float poop-float-a" :src="poopOutline" alt="" />
+      <img class="poop-float poop-float-b" :src="poopOutline" alt="" />
     </div>
 
     <form class="submit-form refined-form" @submit.prevent="handleSubmit">
@@ -70,6 +70,7 @@
 import { computed, reactive, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { submitArticle } from '../services/api'
+import poopOutline from '../assets/poop-outline.svg'
 
 const router = useRouter()
 
