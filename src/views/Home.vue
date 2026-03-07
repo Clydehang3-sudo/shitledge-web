@@ -1,6 +1,7 @@
 <template>
   <section class="hero">
     <p class="eyebrow">Independent Institute of Absurd Studies</p>
+    <p class="hero-kicker">Volume 1 · Issue 1 · Established 2026</p>
     <h1>知屎 Shitledge</h1>
     <p class="subhead">Journal of Quantified Absurdity and Peer-Reviewed Delusion</p>
 

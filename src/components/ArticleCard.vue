@@ -5,6 +5,9 @@
       <router-link :to="`/articles/${article.id}`">{{ article.title }}</router-link>
     </h3>
     <p class="summary">{{ article.summary }}</p>
+    <p class="read-more">
+      <router-link :to="`/articles/${article.id}`">Read paper</router-link>
+    </p>
   </article>
 </template>
 

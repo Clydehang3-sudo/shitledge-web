@@ -3,6 +3,7 @@
     <div class="brand-block">
       <p class="brand-cn">知屎</p>
       <router-link to="/" class="brand-en">Shitledge</router-link>
+      <p class="brand-tag">Journal of Quantified Absurdity</p>
     </div>
 
     <nav class="main-nav" aria-label="Main navigation">
