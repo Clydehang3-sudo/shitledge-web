@@ -1,9 +1,21 @@
 <template>
-  <section class="hero">
+  <section class="journal-cover">
+    <div class="poop-orbit" aria-hidden="true">
+      <span class="poop-float poop-float-a">💩</span>
+      <span class="poop-float poop-float-b">💩</span>
+      <span class="poop-float poop-float-c">💩</span>
+    </div>
+
     <p class="eyebrow">Independent Institute of Absurd Studies</p>
     <p class="hero-kicker">Volume 1 · Issue 1 · Established 2026</p>
-    <h1>知屎 Shitledge</h1>
-    <p class="subhead">Journal of Quantified Absurdity and Peer-Reviewed Delusion</p>
+
+    <div class="cover-block">
+      <p class="cover-label">Current Cover Story</p>
+      <h1>知屎 Shitledge</h1>
+      <p class="subhead">Journal of Quantified Absurdity and Peer-Reviewed Delusion</p>
+      <p class="cover-note">A peer-reviewed home for statistically significant nonsense.</p>
+      <router-link class="cover-cta" to="/articles">Browse Issue</router-link>
+    </div>
 
     <div class="home-grid">
       <article class="panel">

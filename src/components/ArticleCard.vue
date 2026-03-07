@@ -1,5 +1,5 @@
 <template>
-  <article class="article-card">
+  <article class="article-card" :class="{ compact }">
     <p class="meta">{{ formatDate(article.publishedDate) }} · {{ article.author }}</p>
     <h3 class="title">
       <router-link :to="`/articles/${article.id}`">{{ article.title }}</router-link>
@@ -16,6 +16,10 @@ defineProps({
   article: {
     type: Object,
     required: true
+  },
+  compact: {
+    type: Boolean,
+    default: false
   }
 })
 
@@ -23,6 +27,7 @@ const formatDate = (value) => {
   if (!value) {
     return 'Undated'
   }
+
   return new Date(value).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'short',
