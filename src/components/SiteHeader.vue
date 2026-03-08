@@ -3,7 +3,7 @@
     <div class="brand-block">
       <p class="brand-cn">知屎</p>
       <router-link to="/" class="brand-en">Shitledge</router-link>
-      <p class="brand-tag">认真讨论荒谬问题</p>
+      <p class="brand-tag">you need more shitledge</p>
     </div>
 
     <nav class="main-nav" aria-label="Main navigation">
