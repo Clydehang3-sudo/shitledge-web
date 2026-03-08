@@ -3,14 +3,14 @@
     <div class="brand-block">
       <p class="brand-cn">知屎</p>
       <router-link to="/" class="brand-en">Shitledge</router-link>
-      <p class="brand-tag">Journal of Quantified Absurdity</p>
+      <p class="brand-tag">认真讨论荒谬问题</p>
     </div>
 
     <nav class="main-nav" aria-label="Main navigation">
-      <router-link to="/" class="nav-link">Home</router-link>
-      <router-link to="/articles" class="nav-link">Articles</router-link>
-      <router-link to="/submit" class="nav-link">Submit</router-link>
-      <router-link to="/about" class="nav-link">About</router-link>
+      <router-link to="/" class="nav-link">首页</router-link>
+      <router-link to="/explore" class="nav-link">发现</router-link>
+      <router-link to="/ask" class="nav-link">提问</router-link>
+      <router-link to="/about" class="nav-link">关于</router-link>
     </nav>
   </header>
 </template>

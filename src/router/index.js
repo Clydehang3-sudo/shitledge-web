@@ -1,17 +1,20 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-import Articles from '../views/Articles.vue'
-import ArticleDetail from '../views/ArticleDetail.vue'
-import Submit from '../views/Submit.vue'
+import Ask from '../views/Ask.vue'
+import QuestionDetail from '../views/QuestionDetail.vue'
+import Explore from '../views/Explore.vue'
 import About from '../views/About.vue'
 import NotFound from '../views/NotFound.vue'
 
 const routes = [
   { path: '/', name: 'home', component: Home },
-  { path: '/articles', name: 'articles', component: Articles },
-  { path: '/articles/:id', name: 'article-detail', component: ArticleDetail },
-  { path: '/submit', name: 'submit', component: Submit },
+  { path: '/ask', name: 'ask', component: Ask },
+  { path: '/questions/:id', name: 'question-detail', component: QuestionDetail },
+  { path: '/explore', name: 'explore', component: Explore },
   { path: '/about', name: 'about', component: About },
+  { path: '/submit', redirect: '/ask' },
+  { path: '/articles', redirect: '/' },
+  { path: '/articles/:id', redirect: to => `/questions/${to.params.id}` },
   { path: '/:pathMatch(.*)*', name: 'not-found', component: NotFound }
 ]
 

@@ -1,4 +1,4 @@
-const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080'
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8081'
 
 async function parseError(response) {
   const contentType = response.headers.get('content-type') || ''
@@ -35,7 +35,7 @@ export async function fetchHealth() {
   return response.text()
 }
 
-export async function fetchArticles({ query = '', page = 0, size = 6, sort = 'latest' } = {}) {
+export async function fetchQuestions({ query = '', page = 0, size = 12, sort = 'latest' } = {}) {
   const params = new URLSearchParams({
     query,
     page: String(page),
@@ -43,25 +43,54 @@ export async function fetchArticles({ query = '', page = 0, size = 6, sort = 'la
     sort
   })
 
-  const response = await fetch(`${API_BASE}/api/articles?${params.toString()}`)
+  const response = await fetch(`${API_BASE}/api/questions?${params.toString()}`)
   return readJson(response)
 }
 
-export async function fetchArticleDetail(id) {
-  const response = await fetch(`${API_BASE}/api/articles/${id}`)
+export async function fetchQuestionDetail(id) {
+  const response = await fetch(`${API_BASE}/api/questions/${id}`)
   if (response.status === 404) {
     return null
   }
   return readJson(response)
 }
 
-export async function submitArticle(payload) {
-  const response = await fetch(`${API_BASE}/api/articles`, {
+export async function createQuestion(payload) {
+  const response = await fetch(`${API_BASE}/api/questions`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(payload)
   })
+  return readJson(response)
+}
+
+export async function fetchAnswers(questionId) {
+  const response = await fetch(`${API_BASE}/api/questions/${questionId}/answers`)
+  if (response.status === 404) {
+    return []
+  }
+  return readJson(response)
+}
+
+export async function createAnswer(questionId, payload) {
+  const response = await fetch(`${API_BASE}/api/questions/${questionId}/answers`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+  })
+  return readJson(response)
+}
+
+export async function fetchExplore() {
+  const response = await fetch(`${API_BASE}/api/explore`)
+  return readJson(response)
+}
+
+export async function fetchTags() {
+  const response = await fetch(`${API_BASE}/api/tags`)
   return readJson(response)
 }
