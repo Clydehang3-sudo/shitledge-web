@@ -1,4 +1,17 @@
-const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8081'
+const API_BASE = (() => {
+  if (import.meta.env.VITE_API_BASE_URL) {
+    return import.meta.env.VITE_API_BASE_URL
+  }
+
+  if (typeof window !== 'undefined') {
+    const host = window.location.hostname
+    if (host === 'localhost' || host === '127.0.0.1') {
+      return 'http://localhost:8081'
+    }
+  }
+
+  return 'https://shitledge-server.onrender.com'
+})()
 
 async function parseError(response) {
   const contentType = response.headers.get('content-type') || ''
