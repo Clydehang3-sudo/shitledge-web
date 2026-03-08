@@ -1,7 +1,10 @@
 <template>
   <header class="site-header">
     <div class="brand-block">
-      <p class="brand-cn">知屎</p>
+      <p class="brand-cn">
+        <span>知屎</span>
+        <img :src="poopOutline" alt="" class="brand-poop-mark" aria-hidden="true" />
+      </p>
       <router-link to="/" class="brand-en">Shitledge</router-link>
       <p class="brand-tag">you need more shitledge</p>
     </div>
@@ -14,3 +17,7 @@
     </nav>
   </header>
 </template>
+
+<script setup>
+import poopOutline from '../assets/poop-outline.svg'
+</script>

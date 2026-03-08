@@ -1,15 +1,15 @@
 <template>
   <section class="page-stack ask-page">
     <header class="page-head">
-      <p class="eyebrow">提问</p>
-      <h1>提一个值得认真胡扯的问题</h1>
-      <p class="muted-text">问题越具体，回答越精彩。请尽量描述背景，而不是只留一个情绪。</p>
+      <p class="eyebrow">提问入口</p>
+      <h1>问点没法发朋友圈的</h1>
+      <p class="muted-text">建议写具体一点。别只写“我好像完了”，请交代你是怎么一步步走到这里的。</p>
     </header>
 
     <form class="card ask-form" @submit.prevent="handleSubmit">
       <label>
         问题标题
-        <input v-model.trim="form.title" maxlength="160" placeholder="例如：为什么人总在深夜突然想起不该想起的人？" required />
+        <input v-model.trim="form.title" maxlength="160" placeholder="例如：我只是周期性点进她主页，这算复吸吗？" required />
       </label>
 
       <label>
@@ -18,7 +18,7 @@
           v-model.trim="form.description"
           rows="7"
           maxlength="2400"
-          placeholder="补充背景、你的观察、你希望讨论的方向..."
+          placeholder="把背景说清楚：发生了什么、你怎么理解、你卡在哪一步。"
           required
         />
       </label>
@@ -26,18 +26,18 @@
       <div class="form-inline">
         <label>
           你的称呼
-          <input v-model.trim="form.authorName" maxlength="80" placeholder="先用一个网名也行" required />
+          <input v-model.trim="form.authorName" maxlength="80" placeholder="例如：战略性嘴硬" required />
         </label>
 
         <label>
           标签（逗号分隔）
-          <input v-model.trim="form.tags" maxlength="320" placeholder="例如：拖延, 职场, 自我管理" />
+          <input v-model.trim="form.tags" maxlength="320" placeholder="例如：关系, 拖延, 自我欺骗" />
         </label>
       </div>
 
       <div class="form-footer">
         <p class="muted-text">{{ form.title.length }}/160 · {{ form.description.length }}/2400</p>
-        <button type="submit" :disabled="submitting">{{ submitting ? '发布中...' : '发布问题' }}</button>
+        <button type="submit" :disabled="submitting">{{ submitting ? '挂号中...' : '拉一个问题出来' }}</button>
       </div>
     </form>
 
@@ -71,7 +71,7 @@ async function handleSubmit() {
 
   try {
     const created = await createQuestion(form)
-    successMessage.value = '问题发布成功，社区已经准备好认真歪楼。'
+    successMessage.value = '问题已入池。围观群众正在路上。'
     setTimeout(() => {
       router.push(`/questions/${created.id}`)
     }, 500)

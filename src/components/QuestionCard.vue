@@ -4,7 +4,7 @@
       <p class="question-meta">
         {{ formatDate(question.createdAt) }} · {{ question.authorName }}
       </p>
-      <p class="answer-count">{{ question.answerCount }} 回答</p>
+      <p class="answer-count"><span class="poop-mini" aria-hidden="true">💩</span>{{ question.answerCount }} 回应</p>
     </div>
 
     <h3 class="question-title">
@@ -14,7 +14,7 @@
     <p v-if="question.descriptionSnippet" class="question-snippet">{{ question.descriptionSnippet }}</p>
 
     <p v-if="question.latestAnswerSnippet" class="latest-answer">
-      最新回答：{{ question.latestAnswerSnippet }}
+      最新回声：{{ question.latestAnswerSnippet }}
     </p>
 
     <div v-if="question.tags?.length" class="tag-row">
