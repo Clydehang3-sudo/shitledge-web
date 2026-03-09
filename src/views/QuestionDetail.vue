@@ -14,7 +14,7 @@
         <span v-for="tag in question.tags" :key="tag" class="tag-chip">#{{ tag }}</span>
       </div>
 
-      <p class="muted-text">{{ question.answerCount }} 条回应</p>
+      <p class="muted-text">{{ question.likes }} 赞 · {{ question.answerCount }} 条回应</p>
     </article>
 
     <section class="card answer-form-wrap">

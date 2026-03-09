@@ -4,7 +4,10 @@
       <p class="question-meta">
         {{ formatDate(question.createdAt) }} · {{ question.authorName }}
       </p>
-      <p class="answer-count"><span class="poop-mini" aria-hidden="true">💩</span>{{ question.answerCount }} 回应</p>
+      <div class="question-stats">
+        <p v-if="question.likes > 0" class="like-count">{{ question.likes }} 赞</p>
+        <p class="answer-count"><span class="poop-mini" aria-hidden="true">💩</span>{{ question.answerCount }} 回应</p>
+      </div>
     </div>
 
     <h3 class="question-title">

@@ -364,10 +364,26 @@ button:disabled {
   align-items: center;
 }
 
+.question-stats {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
 .question-meta {
   margin: 0;
   color: var(--muted);
   font-size: 0.81rem;
+}
+
+.like-count {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #4e5664;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 2px 8px;
+  white-space: nowrap;
 }
 
 .answer-count {
